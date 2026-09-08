@@ -1,0 +1,7 @@
+*{margin: 0;}
+header {height: 25vh;}
+header h1, p {text-align: center;}
+a{padding: 5px;}
+nav{width: 100vw; text-align: right;}
+nav li{display: inline-block;}
+nav a {text-decoration: none;}
