@@ -1,50 +1,84 @@
 /* Container reset */
-* {margin: 0; padding: 0; border: 0;}
+* {margin: 0; padding: 0; box-sizing: border-box;}
 
-.banner-container {
-  position: relative;
-  width: 100%;
+/*
+body {
+  font-family: ;
+}
+*/
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
 }
 
 /* Header section with image background */
-.header {
+.header,
+.banner-container {
   background-image: url('sneakerbanner.jpg');
   background-size: cover;
   background-position: center;
-  height: 350px; max-width: 100%;
+  width: 100%;
+  aspect-ratio: 16 / 9;
   display:block;
   position: relative;
+  overflow: hidden;
 }
+@media (min-width: 769px) {
+  .header,
+  .banner-container {
+    aspect-ratio: 21 / 9; /* Ultra-wide ratio for desktop screens */
+    max-height: 400px;
+  }
+}
+
+.header_text{text-align: center;}
+
 .banner-image {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   display: block;
   object-fit: cover;
+z-index: 1;
 }
 
 .banner-title {
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  position: relative;
+  z-index: 3;
+  width: 90%;
+  max-width: 800px;
+  text-align: center;
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
   color: #0c0c0c;
   font-family: 'Arial Black', sans-serif;
-  font-size: 2.5rem;
   letter-spacing: 3px;
   text-transform: uppercase;
   text-shadow: 2px 2px 8px rgba(248, 240, 240, 0.8);
-  white-space: nowrap;
+  margin: 0 auto;
 }
-/* Dark gradient overlay to make white text pop over the photo */
+
+
+/* Dark gradient overlay to make text pop over the photo */
 .overlay {
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0.3) 100%);
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
+  z-index: 2;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0.3) 100%);
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   padding: 1.5rem;
+  box-sizing: border-box;
 }
 
 /* Logo styling */
@@ -57,21 +91,28 @@
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 }
 
+/* NAVBAR STYLING STARTS */
+
 nav {
     background-color: #000000;
     width: 100%;
     padding: 1rem 0;
-    text-align: center;
+    display: flex;
+    justify-content: center;
 }
 /* Nav links bar */
 nav ul {
   list-style: none;
   display: flex;
-  justify-content: center;
-  align-items: center;
   gap: 2rem;
   margin: 0;
   padding: 0;
+  justify-content: center;
+  align-items: center;
+}
+
+nav ul li {
+  position: relative; /* For dropdown positioning */
 }
 
 nav ul li a {
@@ -81,15 +122,141 @@ nav ul li a {
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 1px;
-  padding-bottom: 4px;
+  padding: 6px 10px;
+  display: inline-block;
   transition: all 0.2s ease-in-out;
 }
 
 /* Hover and active red accent matching the Bred Jordans */
-nav ul li a:hover,
+nav ul li:hover > a,
 nav ul li a.active {
   color: #db303f; /* Matching sneaker red accent */
   border-bottom: 2px solid #db303f;
+  background-color: transparent;
+}
+
+/* NAVBAR MENU */
+.menu {
+    display: flex;
+    gap: 1em;
+    font-size: 18px;
+}
+
+.menu li:hover {
+    background-color: #e2de19;
+    border-radius: 5px;
+    transition: 0.3s ease;
+}
+
+.menu li a {
+    padding: 5px 14px;
+}
+
+/* DROPDOWN MENU */
+.services {
+    position: relative;
+}
+
+.dropdown {
+    background-color: rgb(10, 10, 10);
+    padding: 0.5em 0;
+    position: absolute; /*WITH RESPECT TO PARENT*/
+    display: none;
+    border-radius: 8px;
+    top: 100%;
+    left: 0;
+    z-index: 1000; /* Stacks the menu above page text and images */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5); /* Adds a subtle shadow for depth */
+}
+
+.dropdown li {
+    padding: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.dropdown li a {
+    display: block;
+    padding: 0.6em 1em;
+    color: #db303f; /* Matching sneaker red accent */
+   width: 100%;
+}
+
+.dropdown li:hover {
+    background-color: #e2de19; /* Matching sneaker yellow accent */
+    color: #ffffff;
+    border-bottom: none;
+}
+
+.services:hover .dropdown {
+    display: block;
+}
+
+/* RESPONSIVE NAVBAR MENU STARTS */
+
+/* CHECKBOX HACK */
+
+input[type="checkbox"] {
+    display: none;
+}
+
+/* HAMBURGER MENU */
+.hamburger {
+    display: none;
+    font-size: 24px;
+    user-select: none;
+    color: #a5a3a3;
+    cursor: pointer;
+}
+
+/* APPLYING MEDIA QUERIES */
+@media (max-width: 768px) {
+.menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    background-color: #000000;
+    right: 0;
+    left: 0;
+    text-align: center;
+     padding: 16px 0;
+     z-index: 999; /* Ensures the menu appears above other content */
+}
+
+.menu li:hover {
+    display: inline-block;
+    background-color: #e2de19;
+    transition: 0.3s ease;
+}
+
+.menu li + li {
+    margin-top: 12px;
+}
+
+
+input[type="checkbox"]:checked ~ .menu {
+    display: flex;
+}
+
+.hamburger {
+    display: block;
+}
+
+.dropdown {
+  position: static; /* Stacks the dropdown items vertically */
+  transform: none;
+  width: 100%;
+  box-shadow: none; /* Removes shadow for a cleaner look on mobile */
+  background-color: #000000; /* Ensures dropdown matches the mobile menu background */
+}
+
+.dropdown li {
+  width: 100%;
+}
+.dropdown li:hover {
+  background-color: #e2de19;
+}
+
 }
 
 /* Main Layout Container */
@@ -146,8 +313,10 @@ main.container {
 
 /* Styling for the image inside the card */
 .about-img {
-  width: 300px;
-  height: 300px;
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  aspect-ratio: 1 / 1; /* Maintains a square aspect ratio */
   object-fit: cover; /* Prevents image distortion */
   border-radius: 6px;
   border: 1px solid #e0e0e0;
