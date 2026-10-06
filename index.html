@@ -5,34 +5,64 @@
     <meta charset="UTF-8">
     <meta name="viewport"content="width=device-width, initial-scale=1.0">
     <title>Jay's Sneaker Collection</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="images/sneakericon.png">
     <link rel="stylesheet" href="./css/styles.css">
 </head>
 
 <body>
 
      <header class="banner-container">
-            <img src="images/sneakerbanner.jpg" alt="sneaker banner" class="banner-image">
-            <h2 class="banner-title">Jay's Sneaker Collection</h2>
-     </header>
+        <img src="images/sneakerbanner.jpg" alt="sneaker banner" class="banner-image">
+        <div class="overlay">
+        <h2 class="banner-title">Jay's Sneaker Collection</h2>
+     </div>
+    </header>
 
-            <nav><!-- Navigation links go here -->
-                <ul>
+            <nav class="navbar">
+             <!-- LOGO -->
+             <div class="logo"> </div>
+
+             <!-- NAVIGATION MENU -->
+             <ul class="nav-links">
+
+                 <!-- USING CHECKBOX HACK -->
+                 <input type="checkbox" id="checkbox_toggle" />
+                 <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+
+            <!-- NAVIGATION MENUS -->
+            <div class="menu">
+
+            <li><a href="#">Home</a></li> 
+            <li><a href="#about-me.html">About</a></li>
+
+            <li class="services">
+
+                <a href="#">Lessons</a>
+                <!-- DROPDOWN MENU -->
+                <ul class="dropdown">
                     <li><a href="fall2026/lesson1/lab/lab2/rescuepages.html">Lab1</a></li>
                     <li><a href="fall2026/lesson2/lab/lab2/rescue/index.html">Lab2</a></li>
                     <li><a href="fall2026/lesson3/lab/lab2/rescue/index.html">Lab3</a></li>
                     <li><a href="fall2026/lesson4/lab/lab2/index.html">Lab4</a></li>
                     <li><a href="fall2026/lesson5/lab/lab2/index.html">Lab5</a></li>
-                    <li><a href="#about-me.html">About</a></li>
-                    <li><a href="#contact.html">Contact</a></li>
+                    <li><a href="fall2026/lesson6/lab/lab2/index.html">Lab6</a></li>
+                    <li><a href="fall2026/lesson7/lab/lab2/index.html">Lab7</a></li>
                 </ul>
-            </nav>
-                    
-                <div>
+                
+                </li>
+                    <li><a href="#">Notes</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </div>
+            </ul>
+            </nav>        
+            <div class="header_text">
+                <h1>HOME</h1>
+                <p>Welcome to my home page!</p>
                     
 
                     
                 </div>
-
+     
 
         <main>
             <!-- Main webpage content goes here -->
@@ -52,7 +82,9 @@
 
                 <p>Years later that all changed the moment I got my first paycheck. Walking into the store and buying my own pair felt like turning a childhood dream into reality, and it was only the beginning. As hyped releases became harder to get, I leveraged my job working at the mall to get ahead of the crowds. I mastered sneaker apps using multiple accounts, frequently winning four or five pairs at a time. I kept the pairs I wanted and sold the extras, and before long, friends and coworkers were reaching out for help securing their own pair. At that point, I realized I was building a nice collection, and I was turning my passion for sneakers into a hustle. Who knew what began as a love for sneakers and a way to fund my collection quickly grew into a thriving business, connecting me with other collectors and giving me access to rare shoes.</p>
 
+            <aside class="sidebar-image">
                 <img src="images/luffyme.jpg" alt="Me" class="about-img">
+             </aside>
              </section>
         </main>
 
