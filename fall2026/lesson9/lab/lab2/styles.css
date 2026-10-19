@@ -1,6 +1,6 @@
 /* CSS Reset */
 
-body, header, nav, main, footer, img, h1, h3, ul, aside, figure, figcaption {
+body, header, nav, main, footer, img, video, h1, h3, ul, aside, figure, figcaption {
 
 margin: 0;
 
@@ -20,7 +20,7 @@ background-color: #f6eee4;
 }
 
 
-img {
+img, video {
 
 max-width: 100%;
 
