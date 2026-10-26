@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+   <url>
+      <loc>http://www.exampledomain.com/index.html</loc>
+   </url>
+   <url>
+      <loc>http://www.exampledomain.com/about.html</loc>
+   </url>
+   <url>
+      <loc>http://www.exampledomain.com/partnership.html</loc>
+   </url>
+   <url>
+      <loc>http://www.exampledomain.com/gallery.html</loc>
+   </url>
+   <url>
+      <loc>http://www.exampledomain.com/faqs.html</loc>
+   </url>
+   <url>
+      <loc>http://www.exampledomain.com/contact.html</loc>
+   </url>
+</urlset>
