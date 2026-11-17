@@ -1,114 +1,240 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport"content="width=device-width, initial-scale=1.0">
-    <title>Jay's Sneaker Collection</title>
-    <link rel="icon" type="image/png" sizes="32x32" href="images/sneakericon.png">
-    <link rel="stylesheet" href="./css/styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A responsive student portfolio page for a web development class.">
+  <title>Home | Jay's Sneaker Collections</title>
+  <link rel="stylesheet" href="./css/styles.css">
+  <link rel="icon" type="image/png" href="images/sneakericon.png">
+
 </head>
 
 <body>
+  <header class="site-header" id="home">
+    <nav class="navbar" aria-label="Main navigation">
+      <a class="logo" href="#home" aria-label="CodeBridge home">
+        <span class="logo-mark" aria-hidden="true">J<script></script></span>
+        <span>Sneaks</span>
+      </a>
 
-     <header class="banner-container">
-        <img src="images/sneakerbanner.jpg" alt="sneaker banner" class="banner-image">
-        <div class="overlay">
-        <h2 class="banner-title">Jay's Sneaker Collection</h2>
-     </div>
-    </header>
+      <button
+        class="menu-toggle"
+        id="menuToggle"
+        type="button"
+        aria-label="Open navigation menu"
+        aria-controls="primaryNav"
+        aria-expanded="false"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
 
-            <nav class="navbar">
-             <!-- LOGO -->
-             <div class="logo"> </div>
+      <ul class="nav-list" id="primaryNav">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        
+        <li class="has-dropdown">
+          <button
+            class="dropdown-toggle"
+            type="button"
+            aria-expanded="false"
+            aria-controls="classesMenu"
+          >
+            Lessons ▾
+          </button>
 
-             <!-- NAVIGATION MENU -->
-             <ul class="nav-links">
+          <ul class="dropdown-menu" id="classesMenu" hidden>
+            <li><a href="#classes">Web Development</a></li>
+            <li class="has-submenu">
+              <button
+                class="submenu-toggle"
+                type="button"
+                aria-expanded="false"
+                aria-controls="topicsMenu"
+              >
+                Course topics ▸
+              </button>
+              <ul class="submenu" id="topicsMenu" hidden>
+                    <li><a href="./lesson1/lab/lab2/rescuepages.html">Intro Web Design</a></li>
+                    <li><a href="./lesson2/lab/lab2/rescue/index.html">Webpage Template</a></li>
+                    <li><a href="./lesson3/lab/lab2/rescue/index.html">Images & Links</a></li>
+                    <li><a href="./lesson4/lab/lab2/index.html">CSS Designing</a></li>
+                    <li><a href="./lesson5/lab/lab2/index.html">Mobile Design</a></li>
+                    <li><a href="./lesson6/lab/lab2/index.html">Tablet Desktop Design</a></li>
+                    <li><a href="./lesson7/lab/lab2/index.html">Improve Layout</a></li>
+                    <li><a href="./lesson8/lab/lab2/index.html">Tables & Forms</a></li>
+                    <li><a href="./lesson9/lab/lab2/index.html">Audio & Video</a></li>
+                    <li><a href="./lesson10/lab/lab2/index.html">JavaScript</a></li>
+                    <li><a href="./lesson11/lab/lab2/index.html">Publish Promote Maintain</a></li>
+                    <li><a href="./lesson12/lab/lab2/index.html">Bootstrap</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li><a href="#notes">Notes</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
 
-                 <!-- USING CHECKBOX HACK -->
-                 <input type="checkbox" id="checkbox_toggle" />
-                 <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+    <div class="hero">
+      <p class="eyebrow">Culture · Retro · Grail</p>
+      <h1>JAY'S SNEAKER COLLECTIONS.</h1>
+      <p>
+        Step inside a personal sneaker archive where street culture meets wearable art.
+      </p>
+      <a class="button" href="#classes">Explore the collection</a>
+    </div>
+  </header>
 
-            <!-- NAVIGATION MENUS -->
-            <div class="menu">
+  <main>
+    <section aria-labelledby="about-title">
+      <div class="section-inner" id="about">
+        <div class="about-image-wrap">
+          <img
+            src="images/jay.jpg" class="about-img"
+            alt="Student headed to class"
+          >
+        </div>
 
-            <li><a href="#home">Home</a></li> 
-            <li><a href="#about">About</a></li>
+        <div class="bio-card">
+          <p class="eyebrow">About the student</p>
+          <h2 class="section-heading" id="about-title">Hi, My name is Jalen.</h2>
+          <p>
+Hi, My name is Jalen Miller. I'm a passionate sneaker collector and entrepreneur. I got to Gwinnett Technical College to pursue a Network Specialist degree. I'm taking a few classes one of them is Web Development. I wasn't interested in web development at first, but as I learned more about it, I became intrigued by the possibilities. Who knows taking this class will lead to in the future!
+          </p>
 
-            <li class="services">
+          <a class="button" href="#contact">Get in touch</a>
+        </div>
+      </div>
+    </section>
 
-                <a href="#">Lessons</a>
-                <!-- DROPDOWN MENU -->
-                <ul class="dropdown">
-                    <li><a href="fall2026/lesson1/lab/lab2/rescuepages.html">Lab1</a></li>
-                    <li><a href="fall2026/lesson2/lab/lab2/rescue/index.html">Lab2</a></li>
-                    <li><a href="fall2026/lesson3/lab/lab2/rescue/index.html">Lab3</a></li>
-                    <li><a href="fall2026/lesson4/lab/lab2/index.html">Lab4</a></li>
-                    <li><a href="fall2026/lesson5/lab/lab2/index.html">Lab5</a></li>
-                    <li><a href="fall2026/lesson6/lab/lab2/index.html">Lab6</a></li>
-                    <li><a href="fall2026/lesson7/lab/lab2/index.html">Lab7</a></li>
-                    <li><a href="fall2026/lesson8/lab/lab2/index.html">Lab8</a></li>
-                    <li><a href="fall2026/lesson9/lab/lab2/index.html">Lab9</a></li>
-                    <li><a href="fall2026/lesson10/lab/lab2/index.html">Lab10</a></li>
-                    <li><a href="fall2026/lesson11/lab/lab2/index.html">Lab11</a></li>
-                    <li><a href="fall2026/lesson12/lab/lab2/index.html">Lab12</a></li>
-                </ul>
-                
-                </li>
-                    <li><a href="#">Notes</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </div>
-            </ul>
-            </nav>        
-            <div class="header_text">
-                
-                </div>
-     
+    <section id="classes" aria-labelledby="classes-title">
+      <div class="section-inner">
+        <p class="eyebrow">What we’re learning</p>
+        <h2 class="section-heading" id="classes-title">Build your web skills</h2>
+        <p class="section-intro">
+          Practice the foundations of the web and use them to create responsive,
+          interactive projects.
+        </p>
+        <ul class="tag-list">
+          <li>HTML structure</li>
+          <li>CSS layouts</li>
+          <li>Transforms &amp; animations</li>
+          <li>JavaScript events</li>
+          <li>Responsive design</li>
+        </ul>
+      </div>
+    </section>
 
-        <main>
-            <!-- Main webpage content goes here -->
-             <section class="about-card">
-                <article>
-                    <h2>About This Site</h2>
+    <section id="contact" aria-labelledby="contact-title">
+      <div class="section-inner">
+        <p class="eyebrow">Say hello</p>
+        <h2 class="section-heading" id="contact-title">Contact</h2>
+        <p class="section-intro">
+          Send a message or explore the map of Alpharetta, Georgia.
+        </p>
 
-                <p>This site serves as a portfolio of my personal collection, a visual journey tracing how a childhood admiration for footwear built a curated vault of my own. My passion for sneakers started when I was in elementary school. Money was tight, so every back-to-school season came with just one pair of shoes for the entire year, always plain black or white so they'd match everything. During this time I would see all the different styles and colors, and when people put them on how it could transform the outfit from something simple to an art piece.</p>
+        <div class="contact-grid">
+          <iframe
+            class="map-frame"
+            title="Google Map showing Alpharetta, Georgia"
+            src="https://www.google.com/maps?q=Alpharetta%2C%20Georgia&output=embed"
+            loading="lazy"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
 
+          <form class="contact-form" id="contactForm">
+            <h3>Send a message</h3>
+            <p>This demo form shows a confirmation; it does not send email.</p>
 
-                <p>Years later that all changed the moment I got my first paycheck. Walking into the store and buying my own pair felt like turning a childhood dream into reality, and it was only the beginning. As hyped releases became harder to get, I leveraged my job working at the mall to get ahead of the crowds. I mastered sneaker apps using multiple accounts, frequently winning four or five pairs at a time. I kept the pairs I wanted and sold the extras, and before long, friends and coworkers were reaching out for help securing their own pair. At that point, I realized I was building a nice collection, and I was turning my passion for sneakers into a hustle. Who knew what began as a love for sneakers and a way to fund my collection quickly grew into a thriving business, connecting me with other collectors and giving me access to rare shoes.</p>
+            <div class="form-field">
+              <label for="name">Name</label>
+              <input id="name" name="name" type="text" autocomplete="name" required>
+            </div>
 
-                <img src="images/sneakercollage.jpg" alt="sneaker collage" class="about-img">
-                <aside>
-                <h3>Did You Know?</h3>
-                <p>Many major sneaker drops happen on Saturdays to stop students from skipping school during the week to wait in line.</p>
-                </aside>
-                </article>
-             </section>
+            <div class="form-field">
+              <label for="email">Email</label>
+              <input
+                id="email"
+                name="email"
+                type="email"
+                autocomplete="email"
+                required
+              >
+            </div>
 
-             <section class="about-card">
-                <article>
-                <h2>About Me</h2>
+            <div class="form-field">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" required></textarea>
+            </div>
 
-                <p>Hi, My name is Jalen Miller. I'm a passionate sneaker collector and entrepreneur. I got to Gwinnett Technical College to pursue a Network Specialist degree. I'm taking a few classes one of them is Web Development. I wasn't interested in web development at first, but as I learned more about it, I became intrigued by the possibilities. Who knows taking this class will lead to in the future!</p>
+            <button class="button" type="submit">Send message</button>
+            <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
 
-                <img src="images/luffyme.jpg" alt="Me" class="about-img">
-                
-            </artlicle>
-             </section>
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div class="footer-column" id="notes">
+        <h3>Code tutorials</h3>
+        <ul>
+          <li><a href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content">HTML basics</a></li>
+          <li><a href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics">CSS basics</a></li>
+          <li><a href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Scripting">JavaScript basics</a></li>
+          <li><a href="https://web.dev/learn/design/">Responsive design</a></li>
+        </ul>
+      </div>
 
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3309.161808964991!2d-84.06851596054926!3d33.96268032256703!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88f5bcfd0ff27f11%3A0x6c3cdec22c110924!2sGwinnett%20Technical%20College!5e0!3m2!1sen!2sus!4v1791336098467!5m2!1sen!2sus" width="600" height="450" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" class="map"></iframe>
+      <div class="footer-column">
+        <h3>Web resources</h3>
+        <ul>
+          <li><a href="https://developer.mozilla.org/">MDN Web Docs</a></li>
+          <li><a href="https://web.dev/">web.dev</a></li>
+          <li><a href="https://www.w3.org/WAI/">Web accessibility</a></li>
+          <li><a href="https://codepen.io/">CodePen</a></li>
+        </ul>
+      </div>
 
+      <div class="footer-column">
+        <h3>Technology news</h3>
+        <ul>
+          <li><a href="https://techcrunch.com/">TechCrunch</a></li>
+          <li><a href="https://www.theverge.com/tech">The Verge: Technology</a></li>
+          <li><a href="https://arstechnica.com/">Ars Technica</a></li>
+          <li><a href="https://news.ycombinator.com/">Hacker News</a></li>
+        </ul>
+      </div>
 
-        </main>
+      <div class="footer-column social-column">
+        <h3>Follow along</h3>
+        <ul class="social-links">
+          <li>
+            <a href="https://www.facebook.com/" aria-label="Facebook">f</a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/" aria-label="Instagram">ig</a>
+          </li>
+          <li>
+            <a href="https://x.com/" aria-label="X">X</a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/" aria-label="LinkedIn">in</a>
+          </li>
+        </ul>
+      </div>
+    </div>
 
-        <footer>
-            <!-- Footer content goes here -->
-                <div>
-                    <h2>Contact Information</h2>
-                    <p>Email: <a href="mailto:jmiller2230@students.gwinetttech.edu">jmiller2230@students.gwinetttech.edu</a></p>
-                    <p>Website created by Jalen Miller</p>
-                </div>
+    <p class="copyright">
+      &copy; <span id="year"></span> CodeBridge Student Project.
+    </p>
+  </footer>
 
-        </footer>
-
+<script src="./js/script.js"></script>
 </body>
 </html>
